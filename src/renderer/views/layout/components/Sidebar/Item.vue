@@ -17,10 +17,7 @@ export default {
       type: String,
       default: ""
     }
-  },
-  mounted() {
-    console.log("icon", this.icon, "title", this.title);
-  },
+  }
   // render(h, context) {
   //   const { icon, title } = context.props;
   //   const vnodes = [];

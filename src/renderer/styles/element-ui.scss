@@ -84,3 +84,14 @@
 .el-range-editor.el-input__inner {
   display: inline-flex !important;
 }
+// 重置表单字体大小
+.el-form-item__label,
+.el-table,
+.el-tabs__item,
+.el-button  {
+  font-size: 18px;
+}
+
+.sidebar-container .el-menu-item {
+  font-size: 20px;
+}

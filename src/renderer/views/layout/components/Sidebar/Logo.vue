@@ -79,7 +79,7 @@ export default {
       // align-items: center;
       margin-left: 10px;
       // width: 70px;
-      font-size: 20px;
+      font-size: 26px;
       font-family: 'HYZongYiJ';
       font-weight: 500;
       color: #fff;

@@ -74,6 +74,7 @@ let rendererConfig = {
           }
         }
       },
+      // 设置svgloader 从icons中获取
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader',
@@ -84,14 +85,26 @@ let rendererConfig = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        exclude: [path.join(__dirname, '../src/renderer/icons')],
         use: {
           loader: 'url-loader',
-          query: {
+          options: {
             limit: 10000,
+            esModule: false,
             name: 'imgs/[name]--[folder].[ext]'
           }
         }
       },
+      // {
+      //   test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     query: {
+      //       limit: 10000,
+      //       name: 'imgs/[name]--[folder].[ext]'
+      //     }
+      //   }
+      // },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         loader: 'url-loader',
@@ -170,7 +183,7 @@ if (process.env.NODE_ENV !== 'production') {
     new webpack.DefinePlugin({
       '__static': `"${path.join(__dirname, '../static').replace(/\\/g, '\\\\')}"`,
       // 添加dev环境变量
-      'process.env.NODE_ENV': '"development"',
+      // 'process.env.NODE_ENV': '"development"',
       'process.env.VUE_APP_BASE_URL' :'"/api"'
     })
   )
