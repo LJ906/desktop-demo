@@ -1,0 +1,63 @@
+.treeSelect{
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:20px 20px 0 20px;
+}
+.treeList{
+    flex:1;
+    
+}
+.undetermined{
+    flex:2;
+    padding-left:20px;
+}
+.selected{
+    flex:2;
+    padding-left:20px;
+}
+.title{
+    border-left: 4px solid rgb(35, 173, 235);
+    padding:2px 0px 2px 16px;
+}
+.content{
+    margin-top:20px;
+}
+.selectContent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.selectContent li{
+    height: 45px;
+    border: 1px solid #495060;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-top:10px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.selectContent li .userImg{
+    width:20px;
+    margin-right: 5px;
+    
+}
+.selectContent li .iconImg{
+    position: absolute;
+    right: -1px;
+    bottom: 0;
+    width: 20px;
+}
+.Selcontent{
+    margin-top:10px;
+}
+
+.no-data {
+    color: #dcdee2;
+    text-indent: 20px;
+
+}
