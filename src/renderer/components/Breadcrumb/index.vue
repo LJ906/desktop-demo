@@ -69,7 +69,7 @@ export default {
 @import '@/styles/variables.scss';
 .app-breadcrumb.el-breadcrumb {
   display: inline-block;
-  font-size: 14px;
+  // font-size: 14px;
   line-height: $navHeight;
   margin-left: 8px;
 

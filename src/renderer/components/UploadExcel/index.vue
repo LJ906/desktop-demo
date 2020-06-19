@@ -18,8 +18,7 @@
 
 <script>
 import XLSX from "xlsx";
-const { dialog } = require("electron").remote;
-
+import LocalFile from '@/vender/LocalFile';
 export default {
   props: {
     beforeUpload: Function, // eslint-disable-line
@@ -67,21 +66,23 @@ export default {
       e.dataTransfer.dropEffect = "copy";
     },
     handleUpload() {
+
+      LocalFile.write('user', 3423);
       // this.$refs["excel-upload-input"].click();
-      dialog.showOpenDialog(
-        {
-          //默认路径
-          defaultPath: "../Desktop",
-          //选择操作，此处是打开文件夹
-          properties: ["openDirectory"],
-          //过滤条件
-          filters: [{ name: "All", extensions: ["*"] }]
-        },
-        function(res) {
-          //回调函数内容，此处是将路径内容显示在input框内
-          console.log("res", res);
-        }
-      );
+      // dialog.showOpenDialog(
+      //   {
+      //     //默认路径
+      //     defaultPath: "../Desktop",
+      //     //选择操作，此处是打开文件夹
+      //     properties: ["multiSelections", "openFile"],
+      //     //过滤条件
+      //     filters: [{ name: "All", extensions: ["*"] }]
+      //   },
+      //   function(res) {
+      //     //回调函数内容，此处是将路径内容显示在input框内
+      //     console.log("res", res);
+      //   }
+      // );
     },
     handleClick(e) {
       const files = e.target.files;

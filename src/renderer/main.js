@@ -9,6 +9,7 @@ import './styles/element-variables.scss'
 import '@/styles/index.scss'
 import './icons'
 import _ from 'lodash'
+import db from './datastore'
 
 import FormValidate from './utils/formValidate'
 import { get, post, download, downloadById } from './utils/request'
@@ -19,11 +20,9 @@ Vue.use(FormValidate)
 Vue.prototype.$_ = _
 Vue.prototype.$post = post
 Vue.prototype.$get = get
-Vue.prototype.$download = download
-Vue.prototype.$downloadById = downloadById
+Vue.prototype.$db = db
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
-// Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -33,6 +32,7 @@ new Vue({
   store,
   template: '<App/>'
 }).$mount('#app')
+
 Vue.mixin({
   methods: {
     notice(msg, type = 'info', callback) {

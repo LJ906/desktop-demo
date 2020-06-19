@@ -53,6 +53,7 @@
   "dependencies": {
     "archiver-zip-encrypted": "^1.0.8",
     "axios": "^0.18.0",
+    "crypto-js": "^4.0.0",
     "element-ui": "^2.13.1",
     "file-saver": "^2.0.2",
     "js-cookie": "^2.2.1",
